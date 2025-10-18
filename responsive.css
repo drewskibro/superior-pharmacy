@@ -605,70 +605,44 @@
 /* Benefits Bar - Premium Design with Soft Transition */
 .benefits-bar {
   position: relative;
-  background: linear-gradient(180deg, 
-    rgba(236, 234, 231, 0.3) 0%, 
-    rgba(255, 255, 255, 0.5) 50%, 
-    rgba(236, 234, 231, 0.3) 100%
-  );
-  padding: 2.5rem 1rem;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
+  background: transparent;
+  padding: 4rem 1rem;
+  overflow: visible;
 }
 
-.benefits-bar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: linear-gradient(180deg, 
-    rgba(236, 234, 231, 0.8) 0%, 
-    transparent 100%
-  );
-  pointer-events: none;
-}
-
+.benefits-bar::before,
 .benefits-bar::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: linear-gradient(0deg, 
-    rgba(236, 234, 231, 0.8) 0%, 
-    transparent 100%
-  );
-  pointer-events: none;
+  display: none;
 }
 
 .benefits-wrapper {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .benefits-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .benefit-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px);
+  background: #ffffff;
   border-radius: 1.25rem;
   padding: 1.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
   box-shadow: 
-    0 2px 8px rgba(0, 0, 0, 0.03),
-    0 8px 24px rgba(0, 150, 137, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
