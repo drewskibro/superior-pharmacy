@@ -546,7 +546,7 @@
 /* How to Choose Section */
 .treatments-choose-section {
   background: linear-gradient(180deg, #fef9f5 0%, #ffffff 100%);
-  padding: 6rem 2rem;
+  padding: 8rem 2rem 0; /* Removed bottom padding, relying on choose-cta's margin-bottom */
 }
 
 .choose-grid {
@@ -605,20 +605,25 @@
 
 .choose-cta {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 4rem; /* Adjusted margin-top for better spacing from cards */
+  margin-bottom: 4rem; /* Explicit margin-bottom for controlled spacing */
 }
 
 .choose-cta p {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 1rem;
-  color: var(--text-gray);
-  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #495565;
+  margin-top: 1rem; /* Reduced margin-top for subtext */
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* FAQ Section */
 .treatments-faq-section {
   background: var(--white);
-  padding: 6rem 2rem;
+  padding: 4rem 2rem 8rem; /* Reduced top padding, maintained bottom padding */
 }
 
 .treatments-faq-container {
@@ -825,6 +830,48 @@
     font-size: 2rem;
   }
   
+  .treatments-choose-section .section-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .treatments-choose-section .section-header p {
+    font-size: 1rem;
+  }
+  
+  .choose-card {
+    padding: 2rem;
+  }
+  
+  .choose-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .choose-card p {
+    font-size: 0.9375rem;
+  }
+  
+  .choose-cta p {
+    font-size: 1rem;
+  }
+  
+  .treatments-faq-section .section-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .treatments-faq-section .section-header p {
+    font-size: 1rem;
+  }
+  
+  .treatments-faq-item summary {
+    font-size: 1rem;
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .treatments-faq-answer p {
+    font-size: 0.9375rem;
+    margin-top: 1rem;
+  }
+  
   .treatments-final-cta-container h2 {
     font-size: 2rem;
   }
@@ -840,6 +887,11 @@
   .treatments-final-trust {
     flex-direction: column;
     gap: 1rem;
+  }
+  
+  .treatments-final-trust-item {
+    width: 100%;
+    justify-content: center;
   }
   
   .treatments-final-divider {
