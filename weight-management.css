@@ -907,7 +907,7 @@
   font-size: 0.875rem;
   color: var(--text-gray);
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 2rem; /* Increased margin-top for better spacing */
 }
 
 .wm-calculator-disclaimer svg {
@@ -1001,6 +1001,7 @@
 .wm-faq-cta {
   text-align: center;
   margin-top: 3rem;
+  margin-bottom: 0;
 }
 
 .wm-faq-cta p {
@@ -1010,176 +1011,10 @@
   margin-bottom: 1.5rem;
 }
 
-/* Success Stories Section */
-.wm-stories-section {
-  background: var(--white);
-  padding: 6rem 2rem;
-}
-
-.wm-stories-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
-.wm-story-card {
-  background: var(--white);
-  border: 1px solid var(--border-light);
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
-}
-
-.wm-story-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.wm-story-image {
-  position: relative;
-  height: 20rem;
-}
-
-.wm-story-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.wm-story-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
-}
-
-.wm-story-rating {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-.wm-story-rating img {
-  height: 1rem;
-  display: block;
-}
-
-.wm-story-name {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  color: var(--white);
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.wm-story-name .name {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.125rem;
-}
-
-.wm-story-name .location {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 0.875rem;
-}
-
-.wm-story-content {
-  padding: 1.5rem;
-  background: linear-gradient(180deg, rgba(0, 150, 137, 0.02) 0%, rgba(255, 255, 255, 1) 100%);
-}
-
-.wm-story-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.badge-dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  background: var(--primary-teal);
-  border-radius: 50%;
-}
-
-.wm-story-badge span:last-child {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  color: var(--primary-teal);
-}
-
-.wm-story-quote {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: rgba(0, 150, 137, 0.1);
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.wm-story-content > p {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-}
-
-.wm-story-accent {
-  width: 3rem;
-  height: 2px;
-  background: var(--primary-teal);
-  margin-bottom: 1rem;
-}
-
-.wm-story-disclaimer {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 0.75rem;
-  color: var(--text-gray);
-  font-style: italic;
-}
-
-.wm-stories-cta-banner {
-  background: linear-gradient(135deg, var(--primary-teal) 0%, #00b5a4 100%);
-  border-radius: 1.5rem;
-  padding: 4rem 3rem;
-  text-align: center;
-  color: var(--white);
-}
-
-.wm-stories-cta-banner h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 2.25rem;
-  margin-bottom: 1rem;
-}
-
-.wm-stories-cta-banner p {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-}
-
-.wm-cta-white {
-  background: var(--white);
-  color: var(--primary-teal);
-}
-
-.wm-cta-white:hover {
-  background: #f5f5f5;
-}
-
 /* Final CTA Section */
 .wm-final-cta-section {
   background: var(--white);
-  padding: 7.5rem 5rem;
+  padding: 4rem 5rem 7.5rem;
 }
 
 .wm-final-cta-container {
