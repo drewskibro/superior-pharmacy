@@ -2589,6 +2589,7 @@ width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  align-items: start;
 }
 
 .story-card {
@@ -2596,6 +2597,8 @@ width: 100%;
   border: 2px solid var(--border-light);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .story-images {
@@ -2655,6 +2658,7 @@ width: 100%;
   font-size: 1.125rem;
   line-height: 1.6;
   color: var(--text-dark);
+  margin-bottom: 1.5rem;
 }
 
 .story-results h4 {
