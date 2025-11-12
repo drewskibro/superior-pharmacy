@@ -3239,10 +3239,21 @@ width: 100%;
   }
   
   .card-text {
-    top: 1rem;
-    left: 1rem;
-    right: 1rem;
-    max-width: calc(100% - 2rem);
+    top: 0.625rem;
+    left: 0.875rem;
+    right: 0.875rem;
+    max-width: calc(100% - 1.75rem);
+  }
+  
+  /* Add semi-transparent background for better readability on mobile */
+  .hero-card .card-text {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 70%, transparent 100%);
+    padding: 0.75rem 0.875rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
   }
   
   .card-subtitle {
