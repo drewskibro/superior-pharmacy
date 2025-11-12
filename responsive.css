@@ -1159,7 +1159,8 @@ section {
 
 @media (max-width: 768px) {
   .benefits-bar-section {
-    padding: 2rem 1.25rem;
+    padding: 1.5rem 1.25rem;
+    margin-top: -1rem;
   }
   
   .benefits-bar-container {
@@ -3046,8 +3047,8 @@ width: 100%;
   }
   
   .hero-content {
-    padding: 6rem 1.5rem 3rem;
-    gap: 2.5rem;
+    padding: 6rem 1.5rem 2rem;
+    gap: 2rem;
   }
   
   /* Enhanced mobile background */
@@ -3245,7 +3246,7 @@ width: 100%;
     max-width: calc(100% - 1.75rem);
   }
   
-  /* Add semi-transparent background for better readability on mobile */
+  /* Add semi-transparent background with fixed height for alignment */
   .hero-card .card-text {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 70%, transparent 100%);
     padding: 0.75rem 0.875rem;
@@ -3254,6 +3255,10 @@ width: 100%;
     left: 0;
     right: 0;
     max-width: 100%;
+    min-height: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   
   .card-subtitle {
@@ -3277,10 +3282,10 @@ width: 100%;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 70%;
+    height: 65%;
     width: auto;
     object-fit: contain;
-    max-width: 80%;
+    max-width: 75%;
   }
   
   .hero-benefit-item {
