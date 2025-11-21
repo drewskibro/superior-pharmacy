@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Health Hub | Superior Pharmacy | Weight Loss Insights</title>
+    <meta name="description" content="Expert articles, guides, and success stories from Superior Pharmacy to support your weight loss journey." />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="health-hub.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "gray0-white": "var(--gray0-white)",
+            },
+          },
+        },
+        plugins: [],
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <img src="https://c.animaapp.com/mgyq65e6VP2ypA/img/cropped-superior-1.png" alt="Superior Pharmacy Logo" class="logo" />
+        
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="weight-management.html">Weight Management</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+              Treatments
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="all-treatments.html">All treatments</a>
+              <a href="mounjaro.html">Mounjaro</a>
+              <a href="wegovy.html">Wegovy</a>
+              <a href="#switching-providers">Switching Providers</a>
+            </div>
+          </div>
+          <a href="health-hub.html" aria-current="page">Health Hub</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+          
+        <button class="cta-button primary-cta desktop-cta" aria-label="Start your assessment" onclick="window.location.href='https://superior-pharmacy-we-z3k8.bolt.host/'">
+          Start Your Assessment
+          <img src="https://c.animaapp.com/mgyq65e6VP2ypA/img/arrowright.svg" alt="" aria-hidden="true" />
+        </button>
+          
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+        <div class="mobile-menu-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="weight-management.html">Weight Management</a>
+          <details class="mobile-dropdown">
+            <summary>Treatments</summary>
+            <div class="mobile-dropdown-content">
+              <a href="all-treatments.html">All treatments</a>
+              <a href="mounjaro.html">Mounjaro</a>
+              <a href="wegovy.html">Wegovy</a>
+              <a href="#switching-providers">Switching Providers</a>
+            </div>
+          </details>
+          <a href="health-hub.html" aria-current="page">Health Hub</a>
+          <a href="contact.html">Contact Us</a>
+          <button class="cta-button primary-cta mobile-cta" onclick="window.location.href='https://superior-pharmacy-we-z3k8.bolt.host/'">
+            Start Your Assessment
+            <img src="https://c.animaapp.com/mgyq65e6VP2ypA/img/arrowright.svg" alt="" aria-hidden="true" />
+          </button>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Health Hub Section -->
+    <section class="health-hub-section" id="health-hub-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-label">HEALTH HUB</span>
+          <h2>Expert insights and guidance for your weight loss journey</h2>
+          <div class="decorative-divider">
+            <span class="divider-line"></span>
+            <span class="divider-dot"></span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+        
+        <div class="health-hub-grid">
+          <!-- Featured Article (Large Card) -->
+          <article class="featured-article-card">
+            <div class="article-image">
+              <img src="https://images.unsplash.com/photo-1579684385127-a866df37dc8f?auto=format&fit=crop&w=800&h=500&q=80" alt="Woman celebrating weight loss" loading="lazy" />
+            </div>
+            <div class="article-content">
+              <div class="article-category">Patient Success Story</div>
+              <h3>How Sarah Lost 4 Stone with Superior Pharmacy</h3>
+              <p>Sarah shares her incredible journey, detailing how personalized support and effective treatment helped her achieve significant weight loss and regain confidence.</p>
+              <div class="article-footer">
+                <span class="article-author">By Dr. Raman Sangha</span>
+                <span class="article-date">October 26, 2025</span>
+                <a href="#" class="read-more-btn">
+                  Read More
+                  <img src="https://c.animaapp.com/mgyq65e6VP2ypA/img/arrowright.svg" alt="" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <div class="supporting-articles-grid">
+            <!-- Supporting Article 1 -->
+            <article class="supporting-article-card card-blue">
+              <div class="article-thumbnail">
+                <img src="https://images.unsplash.com/photo-1588776814500-b55525673766?auto=format&fit=crop&w=300&h=200&q=80" alt="Switching providers" loading="lazy" />
+              </div>
+              <div class="article-content">
+                <div class="article-category">Guide</div>
+                <h4>Switching to Superior Pharmacy from Another Provider</h4>
+                <p>Learn how easy it is to transfer your weight loss treatment to our expert care.</p>
+                <div class="article-meta">
+                  <span class="read-time">5 min read</span>
+                  <a href="#" class="read-more-link">Read More</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Supporting Article 2 -->
+            <article class="supporting-article-card card-pink">
+              <div class="article-thumbnail">
+                <img src="https://images.unsplash.com/photo-1584820927478-87648662b5e7?auto=format&fit=crop&w=300&h=200&q=80" alt="Managing side effects" loading="lazy" />
+              </div>
+              <div class="article-content">
+                <div class="article-category">Medical Advice</div>
+                <h4>Managing Wegovy Side Effects: Expert Tips</h4>
+                <p>Practical advice from our pharmacists to minimize and manage common side effects.</p>
+                <div class="article-meta">
+                  <span class="read-time">3 min read</span>
+                  <a href="#" class="read-more-link">Read More</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Supporting Article 3 -->
+            <article class="supporting-article-card card-peach">
+              <div class="article-thumbnail">
+                <img src="https://images.unsplash.com/photo-1628343878099-df6596165713?auto=format&fit=crop&w=300&h=200&q=80" alt="Mounjaro vs Wegovy comparison" loading="lazy" />
+              </div>
+              <div class="article-content">
+                <div class="article-category">Comparison</div>
+                <h4>Mounjaro vs Wegovy: Which Is Right for You?</h4>
+                <p>A detailed comparison to help you understand the differences and choose your treatment.</p>
+                <div class="article-meta">
+                  <span class="read-time">4 min read</span>
+                  <a href="#" class="read-more-link">Read More</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+        <div class="health-hub-cta">
+          <button class="cta-button secondary-cta" onclick="window.location.href='#'">View All Articles</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <img src="https://c.animaapp.com/mgyq65e6VP2ypA/img/cropped-superior-1.png" alt="Superior Pharmacy" class="footer-logo" />
+            <p class="footer-description">Superior Pharmacy provides online prescription weight loss services across the UK. GPhC registered and regulated.</p>
+            <div class="footer-address">
+              <p><strong>Registered Address:</strong></p>
+              <p>Superior Pharmacy<br />2A Hawes Close<br />Walsall, WS1 3HG<br />United Kingdom</p>
+            </div>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="weight-management.html">Weight Management</a></li>
+              <li><a href="wegovy.html">Wegovy</a></li>
+              <li><a href="mounjaro.html">Mounjaro</a></li>
+              <li><a href="#consultation">Online Consultation</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><a href="#terms">Terms & Conditions</a></li>
+              <li><a href="#complaints">Complaints Procedure</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-prescribers">
+          <h4>Our Prescribers</h4>
+          <p><strong>Superintendent Pharmacist:</strong> Raman Sangha (GPhC No.: 2085763)</p>
+          <p><strong>Clinical Lead:</strong> Resham Sira (GPhC No.: 2086835)</p>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 Superior Pharmacy. All rights reserved. Registered with the General Pharmaceutical Council (GPhC).</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
