@@ -71,22 +71,33 @@
   margin-bottom: 1rem;
 }
 
-/* Rating */
-.mounjaro-rating {
+/* Unified Rating Display */
+.mounjaro-rating-unified {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align to the left */
+  gap: 0.25rem; /* Reduced gap for tighter grouping */
   margin-bottom: 1.5rem;
 }
 
-.mounjaro-stars img {
-  height: 1.5rem;
+.mounjaro-rating-unified .mounjaro-stars img {
+  height: 1.5rem; /* Keep star size consistent */
+  margin-bottom: 0.25rem; /* Small gap below stars */
 }
 
-.mounjaro-rating span {
+.mounjaro-overall-rating {
+  font-family: 'Playfair Display', serif; /* Use a strong, elegant font */
+  font-weight: 700;
+  font-size: 1.5rem; /* Make this prominent */
+  color: var(--primary-teal); /* Highlight with brand color */
+  line-height: 1.2;
+}
+
+.mounjaro-review-count {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 0.9375rem;
   color: var(--text-gray);
+  font-weight: 500;
 }
 
 /* Trust Banner */
@@ -124,31 +135,40 @@
   margin-bottom: 1.5rem;
 }
 
-/* Links */
-.mounjaro-links {
+/* Trust Chips (replacing old links) */
+.mounjaro-trust-chips {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow chips to wrap on smaller screens */
+  gap: 0.75rem; /* Spacing between chips */
   margin-bottom: 2rem;
 }
 
-.mounjaro-links a {
+.trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem; /* Adjusted padding for chip size */
+  background: rgba(0, 150, 137, 0.05); /* Light background */
+  border: 1px solid rgba(0, 150, 137, 0.1); /* Subtle border */
+  border-radius: 2rem; /* Pill shape */
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
-  font-size: 0.9375rem;
-  color: var(--primary-teal);
-  text-decoration: none;
-  transition: color 0.3s;
+  font-size: 0.875rem; /* Readable font size */
+  color: var(--primary-teal); /* Brand color for text */
+  white-space: nowrap; /* Prevent text wrapping within a chip */
+  transition: all 0.2s ease;
 }
 
-.mounjaro-links a:hover {
-  color: #007d72;
-  text-decoration: underline;
+.trust-chip:hover {
+  background: rgba(0, 150, 137, 0.1);
+  transform: translateY(-1px);
 }
 
-.mounjaro-links span {
-  color: var(--border-light);
+.trust-chip svg {
+  width: 1rem; /* Icon size */
+  height: 1rem; /* Icon size */
+  color: var(--primary-teal); /* Brand color for icon */
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 /* Benefits List */
@@ -192,6 +212,32 @@
   font-size: 1.5rem;
   color: var(--text-dark);
   margin-bottom: 1.5rem;
+  text-align: center; /* Center the new heading */
+}
+
+.mounjaro-dosage-info-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 150, 137, 0.08);
+  border-left: 4px solid var(--primary-teal);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem; /* Increased margin for spacing */
+}
+
+.mounjaro-dosage-info-banner svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--primary-teal);
+  flex-shrink: 0;
+}
+
+.mounjaro-dosage-info-banner span {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text-dark);
 }
 
 .mounjaro-dosage-grid {
@@ -211,21 +257,14 @@
   background: var(--white);
   border: 2px solid var(--border-light);
   border-radius: 1rem;
-  cursor: pointer;
-  transition: all 0.3s;
+  /* Removed interactive styles */
+  cursor: default; /* Indicate non-interactiveness */
+  transition: none; /* Remove hover transition */
+  min-height: 8rem; /* Ensure consistent height */
+  text-align: center;
 }
 
-.mounjaro-dosage-btn:hover {
-  border-color: var(--primary-teal);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 150, 137, 0.15);
-}
-
-.mounjaro-dosage-btn.active {
-  border-color: var(--primary-teal);
-  background: rgba(0, 150, 137, 0.05);
-  box-shadow: 0 4px 12px rgba(0, 150, 137, 0.2);
-}
+/* Removed .mounjaro-dosage-btn:hover and .mounjaro-dosage-btn.active styles */
 
 .dosage-amount {
   font-family: 'Playfair Display', serif;
@@ -238,6 +277,14 @@
   font-family: 'Nunito Sans', sans-serif;
   font-size: 0.875rem;
   color: var(--text-gray);
+}
+
+.dosage-price {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--primary-teal);
+  margin-top: 0.5rem; /* Spacing between pens and price */
 }
 
 .mounjaro-cta {
@@ -350,18 +397,26 @@
   align-items: center;
   gap: 0.75rem;
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 0.875rem;
   font-weight: 600;
+  font-size: 0.875rem;
   color: #495565;
   padding: 0.75rem 1rem;
-  background: rgba(0, 150, 137, 0.05);
-  border-radius: 0.75rem;
-  border: 1px solid rgba(0, 150, 137, 0.1);
+  background: rgba(0, 150, 137, 0.05); /* Light background */
+  border: 1px solid rgba(0, 150, 137, 0.1); /* Subtle border */
+  border-radius: 0.75rem; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Subtle depth */
+  transition: all 0.3s ease; /* Smooth transitions for hover */
+}
+
+.mounjaro-trust-badge-item:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 12px rgba(0, 150, 137, 0.1); /* Enhanced shadow on hover */
+  background: rgba(0, 150, 137, 0.08); /* Slightly darker background on hover */
 }
 
 .mounjaro-trust-badge-item svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.25rem; /* Slightly larger icon */
+  height: 1.25rem; /* Slightly larger icon */
   color: var(--primary-teal);
   flex-shrink: 0;
 }

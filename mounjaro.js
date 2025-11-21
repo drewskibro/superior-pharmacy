@@ -1,12 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const dosageBtns = document.querySelectorAll('.mounjaro-dosage-btn');
-  
-  dosageBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      dosageBtns.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
+  // Removed dosage button interaction logic as per redesign.
   
   const faqItems = document.querySelectorAll('.mounjaro-faq-item');
   faqItems.forEach(item => {
