@@ -481,11 +481,20 @@
   border-top: 1px solid var(--border-light);
 }
 
-.mounjaro-review-avatar {
+.mounjaro-review-initials {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  object-fit: cover;
+  background: linear-gradient(135deg, var(--primary-teal) 0%, #00b5a4 100%); /* Gradient background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Playfair Display', serif; /* Elegant font for initials */
+  font-weight: 700;
+  font-size: 1.25rem; /* Prominent size */
+  color: var(--white); /* White text for contrast */
+  box-shadow: 0 2px 8px rgba(0, 150, 137, 0.2); /* Subtle shadow */
 }
 
 .mounjaro-review-info {
