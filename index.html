@@ -33,7 +33,18 @@
           <!-- Desktop Navigation -->
         <div class="nav-links">
           <a href="index.html">Home</a>
-          <a href="about.html">About us</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+              About us
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="about.html">About Us</a>
+              <a href="resources.html">Resources</a>
+            </div>
+          </div>
           <a href="weight-management.html">Weight Management</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">
@@ -49,7 +60,6 @@
               <a href="#switching-providers">Switching Providers</a>
             </div>
           </div>
-          <a href="health-hub.html">Health Hub</a>
           <a href="contact.html">Contact Us</a>
         </div>
           
@@ -70,7 +80,13 @@
         <div class="mobile-menu">
         <div class="mobile-menu-links">
           <a href="index.html">Home</a>
-          <a href="about.html">About us</a>
+          <details class="mobile-dropdown">
+            <summary>About us</summary>
+            <div class="mobile-dropdown-content">
+              <a href="about.html">About Us</a>
+              <a href="resources.html">Resources</a>
+            </div>
+          </details>
           <a href="weight-management.html">Weight Management</a>
           <details class="mobile-dropdown">
             <summary>Treatments</summary>
@@ -81,7 +97,6 @@
               <a href="#switching-providers">Switching Providers</a>
             </div>
           </details>
-          <a href="health-hub.html">Health Hub</a>
           <a href="contact.html">Contact Us</a>
           <button class="cta-button primary-cta mobile-cta" onclick="window.location.href='https://superior-pharmacy-we-z3k8.bolt.host/'">
             Start Your Assessment

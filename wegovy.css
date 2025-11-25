@@ -71,22 +71,33 @@
   margin-bottom: 1rem;
 }
 
-/* Rating */
-.wegovy-rating {
+/* Unified Rating Display */
+.wegovy-rating-unified {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align to the left */
+  gap: 0.25rem; /* Reduced gap for tighter grouping */
   margin-bottom: 1.5rem;
 }
 
-.wegovy-stars img {
-  height: 1.5rem;
+.wegovy-rating-unified .wegovy-stars img {
+  height: 1.5rem; /* Keep star size consistent */
+  margin-bottom: 0.25rem; /* Small gap below stars */
 }
 
-.wegovy-rating span {
+.wegovy-overall-rating {
+  font-family: 'Playfair Display', serif; /* Use a strong, elegant font */
+  font-weight: 700;
+  font-size: 1.5rem; /* Make this prominent */
+  color: var(--primary-teal); /* Highlight with brand color */
+  line-height: 1.2;
+}
+
+.wegovy-review-count {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 0.9375rem;
   color: var(--text-gray);
+  font-weight: 500;
 }
 
 /* Trust Banner */
@@ -124,31 +135,40 @@
   margin-bottom: 1.5rem;
 }
 
-/* Links */
-.wegovy-links {
+/* Trust Chips (replacing old links) */
+.wegovy-trust-chips {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow chips to wrap on smaller screens */
+  gap: 0.75rem; /* Spacing between chips */
   margin-bottom: 2rem;
 }
 
-.wegovy-links a {
+.trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem; /* Adjusted padding for chip size */
+  background: rgba(0, 150, 137, 0.05); /* Light background */
+  border: 1px solid rgba(0, 150, 137, 0.1); /* Subtle border */
+  border-radius: 2rem; /* Pill shape */
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
-  font-size: 0.9375rem;
-  color: var(--primary-teal);
-  text-decoration: none;
-  transition: color 0.3s;
+  font-size: 0.875rem; /* Readable font size */
+  color: var(--primary-teal); /* Brand color for text */
+  white-space: nowrap; /* Prevent text wrapping within a chip */
+  transition: all 0.2s ease;
 }
 
-.wegovy-links a:hover {
-  color: #007d72;
-  text-decoration: underline;
+.trust-chip:hover {
+  background: rgba(0, 150, 137, 0.1);
+  transform: translateY(-1px);
 }
 
-.wegovy-links span {
-  color: var(--border-light);
+.trust-chip svg {
+  width: 1rem; /* Icon size */
+  height: 1rem; /* Icon size */
+  color: var(--primary-teal); /* Brand color for icon */
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 /* Benefits List */
@@ -192,53 +212,76 @@
   font-size: 1.5rem;
   color: var(--text-dark);
   margin-bottom: 1.5rem;
+  text-align: center; /* Center the new heading */
 }
 
-.wegovy-pricing-table {
-  background: var(--white);
-  border-radius: 1rem;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  border: 1px solid var(--border-light);
-}
-
-.pricing-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.pricing-row:last-child {
-  border-bottom: none;
-}
-
-.pricing-header {
-  background: var(--primary-teal);
-  color: var(--white);
-}
-
-.pricing-header .pricing-cell {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--white);
-}
-
-.pricing-cell {
-  padding: 1rem 1.5rem;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 0.9375rem;
-  color: var(--text-dark);
+.wegovy-dosage-info-banner {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 150, 137, 0.08);
+  border-left: 4px solid var(--primary-teal);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem; /* Increased margin for spacing */
 }
 
-.pricing-price {
+.wegovy-dosage-info-banner svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--primary-teal);
+  flex-shrink: 0;
+}
+
+.wegovy-dosage-info-banner span {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text-dark);
+}
+
+.wegovy-dosage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.wegovy-dosage-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  background: var(--white);
+  border: 2px solid var(--border-light);
+  border-radius: 1rem;
+  cursor: default; /* Indicate non-interactiveness */
+  transition: none; /* Remove hover transition */
+  min-height: 8rem; /* Ensure consistent height */
+  text-align: center;
+}
+
+.dosage-amount {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+
+.dosage-pens {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-gray);
+}
+
+.dosage-price {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.125rem;
   color: var(--primary-teal);
-  justify-content: flex-end;
+  margin-top: 0.5rem; /* Spacing between pens and price */
 }
 
 .wegovy-cta {
@@ -351,18 +394,26 @@
   align-items: center;
   gap: 0.75rem;
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 0.875rem;
   font-weight: 600;
+  font-size: 0.875rem;
   color: #495565;
   padding: 0.75rem 1rem;
-  background: rgba(0, 150, 137, 0.05);
-  border-radius: 0.75rem;
-  border: 1px solid rgba(0, 150, 137, 0.1);
+  background: rgba(0, 150, 137, 0.05); /* Light background */
+  border: 1px solid rgba(0, 150, 137, 0.1); /* Subtle border */
+  border-radius: 0.75rem; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Subtle depth */
+  transition: all 0.3s ease; /* Smooth transitions for hover */
+}
+
+.wegovy-trust-badge-item:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 12px rgba(0, 150, 137, 0.1); /* Enhanced shadow on hover */
+  background: rgba(0, 150, 137, 0.08); /* Slightly darker background on hover */
 }
 
 .wegovy-trust-badge-item svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.25rem; /* Slightly larger icon */
+  height: 1.25rem; /* Slightly larger icon */
   color: var(--primary-teal);
   flex-shrink: 0;
 }
@@ -427,11 +478,20 @@
   border-top: 1px solid var(--border-light);
 }
 
-.wegovy-review-avatar {
+.wegovy-review-initials {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  object-fit: cover;
+  background: linear-gradient(135deg, var(--primary-teal) 0%, #00b5a4 100%); /* Gradient background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Playfair Display', serif; /* Elegant font for initials */
+  font-weight: 700;
+  font-size: 1.25rem; /* Prominent size */
+  color: var(--white); /* White text for contrast */
+  box-shadow: 0 2px 8px rgba(0, 150, 137, 0.2); /* Subtle shadow */
 }
 
 .wegovy-review-info {
@@ -885,6 +945,10 @@
   
   .wegovy-dosage-section {
     padding: 2rem;
+  }
+  
+  .wegovy-dosage-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .wegovy-reviews-carousel {

@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Removed dosage button interaction logic as per redesign.
+  
   const faqItems = document.querySelectorAll('.wegovy-faq-item');
   faqItems.forEach(item => {
     const summary = item.querySelector('summary');
